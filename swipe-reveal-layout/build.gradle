@@ -1,14 +1,18 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.android.library'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
+plugins {
+    id 'com.android.library'
+}
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "23.0.3"
+    namespace 'com.chauthai.swipereveallayout'
+    compileSdkVersion 34
+//    buildToolsVersion "23.0.3"
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 8
         versionName "1.4.1"
     }
@@ -21,8 +25,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:24.2.0'
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile 'com.android.support:support-v4:24.2.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.customview:customview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
 }
 
 ext {
@@ -49,5 +57,5 @@ ext {
     allLicenses = ["MIT"]
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
